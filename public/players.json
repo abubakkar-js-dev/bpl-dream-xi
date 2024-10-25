@@ -1,0 +1,130 @@
+[
+    {
+        "name": "Tamim Iqbal",
+        "team": "Bangladesh",
+        "role": "Batsman",
+        "rating": {
+            "batting": "Left-Hand-Bat"
+        },
+        "price": 1200000,
+        "image": "https://i.ibb.co/Dkf6ZQb/1022-6666666666666x767-origin-0x0-Tamim-Iqbal-FSA.jpg"
+    },
+    {
+        "name": "Shakib Al Hasan",
+        "team": "Bangladesh",
+        "role": "All-Rounder",
+        "rating": {
+            "batting": "Left-Hand-Bat",
+            "bowling": "Left-Arm Orthodox"
+        },
+        "price": 1400000,
+        "image": "https://i.ibb.co/XxCshp6/386666-6.jpg"
+    },
+    {
+        "name": "Mashrafe Mortaza",
+        "team": "Bangladesh",
+        "role": "Bowler",
+        "rating": {
+            "batting": "Right-Hand-Bat",
+            "bowling": "Right-Arm Medium Fast"
+        },
+        "price": 1000000,
+        "image": "https://i.ibb.co/S0zdbtX/mashrafe-mortaza.jpg"
+    },
+    {
+        "name": "Mushfiqur Rahim",
+        "team": "Bangladesh",
+        "role": "Wicketkeeper",
+        "rating": {
+            "batting": "Right-Hand-Bat"
+        },
+        "price": 1300000,
+        "image": "https://i.ibb.co/gwxz756/Mushfiqur-Rahim-missed-4th-double-century-in-Test-Cricket-during-PAK-vs-BAN-1st-Test.jpg"
+    },
+    {
+        "name": "Mahmudullah Riyad",
+        "team": "Bangladesh",
+        "role": "All-Rounder",
+        "rating": {
+            "batting": "Right-Hand-Bat",
+            "bowling": "Right-Arm Off-Break"
+        },
+        "price": 1150000,
+        "image": "https://i.ibb.co/D8KvZDB/624-C2-BEF-670-D-4400-BD94-EB9-BA2-EDCCAB-20241008163905.webp"
+    },
+    {
+        "name": "Mustafizur Rahman",
+        "team": "Bangladesh",
+        "role": "Bowler",
+        "rating": {
+            "batting": "Left-Hand-Bat",
+            "bowling": "Left-Arm Fast Medium"
+        },
+        "price": 1100000,
+        "image": "https://i.ibb.co/0Z7G3Pr/mustafizur.jpg"
+    },
+    {
+        "name": "Soumya Sarkar",
+        "team": "Bangladesh",
+        "role": "All-Rounder",
+        "rating": {
+            "batting": "Left-Hand-Bat",
+            "bowling": "Right-Arm Medium"
+        },
+        "price": 1050000,
+        "image": "https://i.ibb.co/RSQMYtc/souymo.jpg"
+    },
+    {
+        "name": "Liton Das",
+        "team": "Bangladesh",
+        "role": "Batsman",
+        "rating": {
+            "batting": "Right-Hand-Bat"
+        },
+        "price": 1100000,
+        "image": "https://i.ibb.co/MnWNDvR/161895694-286762669474735-3447833747296618314-n.jpg"
+    },
+    {
+        "name": "Afif Hossain",
+        "team": "Bangladesh",
+        "role": "All-Rounder",
+        "rating": {
+            "batting": "Left-Hand-Bat"
+        },
+        "price": 900000,
+        "image": "https://i.ibb.co/c88XHKK/Pakistan-Jr-League-Ariful-Islam.jpg"
+    },
+    {
+        "name": "Taskin Ahmed",
+        "team": "Bangladesh",
+        "role": "Bowler",
+        "rating": {
+            "batting": "Right-Hand-Bat",
+            "bowling": "Right-Arm Fast"
+        },
+        "price": 950000,
+        "image": "https://i.ibb.co/480ctKp/b8ecea552b1013457114ee63616d540a.jpg"
+    },
+    {
+        "name": "Mehidy Hasan Miraz",
+        "team": "Bangladesh",
+        "role": "All-Rounder",
+        "rating": {
+            "batting": "Right-Hand-Bat",
+            "bowling": "Right-Arm Off-Break"
+        },
+        "price": 1250000,
+        "image": "https://i.ibb.co/xDKJhtn/386827-6.jpg"
+    },
+    {
+        "name": "Mohammad Saifuddin",
+        "team": "Bangladesh",
+        "role": "All-Rounder",
+        "rating": {
+            "batting": "Right-Hand-Bat",
+            "bowling": "Right-Arm Medium Fast"
+        },
+        "price": 950000,
+        "image": "https://i.ibb.co/NSZqDj1/saifuddin-5.jpg"
+    }
+]
