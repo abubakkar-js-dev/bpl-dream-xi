@@ -12,7 +12,7 @@ const Players = () => {
         .then(data => setPlayers(data));
     },[])
     return (
-        <section className="w-11/12 md:container mx-auto">
+        <section className="w-11/12 md:container mx-auto mb-[285px] md:mb-[385px]">
             <div className="flex justify-between items-center mb-6 md:mb-8">
                 <h2 className="text-xl md:text-[28px] font-bold text-black">{isAvailablePlayers ? "Available Players" : "Selected Player (4/6)"}</h2>
                 <div className="rounded-2xl border">

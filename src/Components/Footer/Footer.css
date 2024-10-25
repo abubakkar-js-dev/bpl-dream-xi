@@ -1,0 +1,13 @@
+.shadow-bg{
+    background: url('../../assets/images/bg-shadow.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: white;
+}
+.btn-bg{
+    background: url('../../assets/images/btnbg.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

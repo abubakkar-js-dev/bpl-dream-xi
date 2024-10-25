@@ -8,7 +8,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#E7FE29'
+        primary: '#E7FE29',
+        footer: '#06091A'
       }
     },
   },
