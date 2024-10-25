@@ -7,7 +7,7 @@ const Footer = () => {
                <div className=' absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2  w-11/12 md:container bg-white/15 border-2 border-white rounded-3xl p-5'>
                     <div className='shadow-bg w-full h-[337px] mx-auto flex flex-col justify-center items-center rounded-3xl border'>
                     <h2 className='mb-4 text-black text-2xl md:text-3xl font-bold'>Subscribe to our Newsletter</h2>
-                    <p className='mb-6 text-base md:text-xl font-medium text-black/70'>Get the latest updates and news right in your inbox!</p>
+                    <p className='mb-6 text-base md:text-xl font-medium text-black/70 px-4'>Get the latest updates and news right in your inbox!</p>
                     <div className='flex flex-col md:flex-row gap-4'>
                         <input className='h-[48px] md:h-[56px] min-w-[360px] max-w-full pl-6 lg:pl-[30px] rounded-xl border-2 border-gray-100 focus:outline-none' type="text" placeholder='Enter your email'/>
                         <button className="h-[48px] md:h-[56px] btn-bg text-black font-bold px-5 md:px-7 text-base shadow-md rounded-xl">Subscribe</button>

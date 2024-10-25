@@ -1,7 +1,7 @@
 import userIcon from '../../assets/icons/user.png'
 import flagIcon from '../../assets/icons/flag.png'
 import PropTypes from "prop-types";
-const Player = ({player}) => {
+const Player = ({player,handleSelectedPayers}) => {
     const {name,team,role,rating,price,image} = player;
     const {bowling: bowlingRatt, batting: battingRatt} = rating;
     return (
@@ -33,7 +33,7 @@ const Player = ({player}) => {
                 </div>
                 <div className='flex justify-between items-center'>
                     <p className='text-black font-semibold text-base'>Price: ${price}</p>
-                    <button className='px-4 py-[9px] text-xs text-black border rounded-lg hover:bg-primary transition'>Choose Player</button>
+                    <button onClick={() => handleSelectedPayers(player)} className='px-4 py-[9px] text-xs text-black border rounded-lg hover:bg-primary transition'>Choose Player</button>
                 </div>
             </div>  
         </div>
@@ -42,6 +42,7 @@ const Player = ({player}) => {
 
 Player.propTypes = {
     player: PropTypes.object.isRequired,
+    handleSelectedPayers: PropTypes.func.isRequired,
 }
 
 export default Player;

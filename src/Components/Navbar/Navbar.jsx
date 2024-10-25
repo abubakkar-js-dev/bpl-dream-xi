@@ -1,7 +1,8 @@
 import Logo from '../../assets/images/logo.png';
 import Coin from '../../assets/images/coin.png'
 import { useState } from 'react';
-const Navbar = () => {
+import PropTypes from 'prop-types';
+const Navbar = ({totalBalance}) => {
     const [isDropdownOpen,setIsDropdownOpen] = useState(false);
 
     const handleDropdown = () => {
@@ -49,7 +50,7 @@ const Navbar = () => {
                 </div>
                 <div className="ml-4">
                     <a className="btn">
-                        <span className='text-base font-semibold'>0 Coin</span>
+                        <span className='text-base font-semibold'>{totalBalance} Coin</span>
                         <img src={Coin} alt="" />
                     </a>
                 </div>
@@ -57,5 +58,9 @@ const Navbar = () => {
         </nav>
     );
 };
+
+Navbar.propTypes = {
+    totalBalance: PropTypes.number.isRequired,
+}
 
 export default Navbar;
