@@ -1,0 +1,7 @@
+.hero-bg{
+    background: url('../../assets/images/bg-shadow.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: black;
+    background-size: cover;
+}

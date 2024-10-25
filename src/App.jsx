@@ -1,11 +1,21 @@
-import './App.css'
+import Hero from "./Components/Hero/Hero"
+import Navbar from "./Components/Navbar/Navbar"
+import Players from "./Components/Players/Players"
 
 function App() {
 
   return (
     <>
-      <h1 className='text-3xl text-white bg-purple-500 text-center rounded'>Vite + React</h1>
-      <button className='btn btn-primary'>Click me</button>
+      <header>
+        {/* Navbar */}
+        <Navbar />
+        {/* Hero */}
+        <Hero />
+      </header>
+      <main>
+        {/* Players */}
+        <Players />
+      </main>
     </>
   )
 }
