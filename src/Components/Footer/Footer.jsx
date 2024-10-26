@@ -20,7 +20,7 @@ const Footer = () => {
     useEffect(()=>{
         const mailFromLs = getEmailFromLs();
         if(mailFromLs){
-            toast('You are the regular user. Thank you');
+            toast('You are the regular user. Thank you.');
         }else{
             toast('Hello User, Please Subscribe and stay with us.');
         }
