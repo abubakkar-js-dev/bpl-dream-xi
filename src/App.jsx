@@ -1,8 +1,12 @@
-import { useState } from "react"
-import Footer from "./Components/Footer/Footer"
-import Hero from "./Components/Hero/Hero"
-import Navbar from "./Components/Navbar/Navbar"
-import Players from "./Components/Players/Players"
+import { useState } from "react";
+import Footer from "./Components/Footer/Footer";
+import Hero from "./Components/Hero/Hero";
+import Navbar from "./Components/Navbar/Navbar";
+import Players from "./Components/Players/Players";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+import { toast } from "react-toastify"
+
 
 function App() {
   const [totalBalance,setTotalBalance] = useState(0);
@@ -14,11 +18,14 @@ function App() {
     setTotalBalance(newBalance);
   };
 
-  // select player 
-  const handleSelectedPayers = (player) => {
-    if(player.price < totalBalance){
+  // select  player (add)
+  const handleAddSelectedPayers = (player) => {
+    if(player.price <= totalBalance){
       if(selectedPlayers.includes(player)){
-        alert('Player already selected')
+        toast('Player is already selected.')
+        return;
+      }else if(selectedPlayers.length === 6){
+        toast('You have already added maximum player.');
         return;
       }
       setSelectedPlayers([...selectedPlayers,player]);
@@ -26,8 +33,14 @@ function App() {
       const newTotalBalance = totalBalance - player.price;
       setTotalBalance(newTotalBalance);
     }else{
-      alert('Not Enough Balance!');
+      toast('Not Enough Balance!');
     }
+  }
+
+  // remove selected player
+  const handleRemoveSelectedPlayer = (selectedPlayer) => {
+    const remainingPlayers = selectedPlayers.filter((player) => player.id !== selectedPlayer.id);
+    setSelectedPlayers(remainingPlayers);
   }
 
   return (
@@ -41,12 +54,15 @@ function App() {
       <main>
         {/* Players */}
         <Players 
-        handleSelectedPayers={handleSelectedPayers}
+        handleAddSelectedPayers={handleAddSelectedPayers}
         selectedPlayers = {selectedPlayers}
+        handleRemoveSelectedPlayer = {handleRemoveSelectedPlayer}
          />
       </main>
       {/* Footer */}
       <Footer />
+      {/*  Toast Container */}
+      <ToastContainer position='top-center'/>
     </>
   )
 }

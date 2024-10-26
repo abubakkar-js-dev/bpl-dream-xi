@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import deleteIcon from '../../assets/icons/delete.png'
-const SelectedPlayer = ({selectedPlayer}) => {
+const SelectedPlayer = ({selectedPlayer,handleRemoveSelectedPlayer}) => {
     const {name,image,role} = selectedPlayer;
     return (
         <div className="p-5 md:p-6 border-2 border-gray-100 rounded-xl flex justify-between items-center">
@@ -11,14 +11,15 @@ const SelectedPlayer = ({selectedPlayer}) => {
                 <p>{role}</p>
                 </div>
             </div>
-            <div>
+            <button onClick={()=> handleRemoveSelectedPlayer(selectedPlayer)}>
                 <img className="w-5" src={deleteIcon} alt="delete icon" />
-            </div>
+            </button>
         </div>
     );
 };
 
 SelectedPlayer.propTypes = {
     selectedPlayer: PropTypes.object.isRequired,
+    handleRemoveSelectedPlayer: PropTypes.func.isRequired,
 }
 export default SelectedPlayer;
