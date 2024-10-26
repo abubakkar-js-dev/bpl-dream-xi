@@ -1,6 +1,30 @@
+import { useEffect, useState } from 'react';
 import FooterLogo from '../../assets/images/logo-footer.png';
 import './Footer.css';
+import { getEmailFromLs, saveEmailToLs } from '../../utilities/localStorage';
+import { toast } from 'react-toastify';
 const Footer = () => {
+    const [emailInput,setEmailInput] = useState('');
+    const handleEmailInput = (event) =>{
+        const inputValue = event.target.value;
+        if(inputValue.includes('@')){
+            setEmailInput(inputValue);
+        }
+    }
+ 
+    const handleSubscribe = ()=>{
+        saveEmailToLs(emailInput);
+        
+    }
+
+    useEffect(()=>{
+        const mailFromLs = getEmailFromLs();
+        if(mailFromLs){
+            toast('You are the regular user. Thank you');
+        }else{
+            toast('Hello User, Please Subscribe and stay with us.');
+        }
+    },[])
     return (
         <footer className='bg-footer relative'>
                {/* news letter section */}
@@ -9,8 +33,8 @@ const Footer = () => {
                     <h2 className='mb-4 text-black text-xl md:text-2xl lg:text-3xl font-bold'>Subscribe to our Newsletter</h2>
                     <p className='mb-6 text-base md:text-xl font-medium text-black/70 px-4'>Get the latest updates and news right in your inbox!</p>
                     <div className='flex flex-col md:flex-row gap-4 w-full px-2 justify-center'>
-                        <input className='h-[48px] md:h-[56px]  w-full md:w-[360px] pl-6 lg:pl-[30px] rounded-xl border-2 border-gray-100 focus:outline-none' type="text" placeholder='Enter your email'/>
-                        <button className="h-[48px] md:h-[56px] btn-bg text-black font-bold px-5 md:px-7 text-base shadow-md rounded-xl">Subscribe</button>
+                        <input onChange={handleEmailInput} className='h-[48px] md:h-[56px]  w-full md:w-[360px] pl-6 lg:pl-[30px] rounded-xl border-2 border-gray-100 focus:outline-none' type="email" placeholder='Enter your email'/>
+                        <button onClick={handleSubscribe} className="h-[48px] md:h-[56px] btn-bg text-black font-bold px-5 md:px-7 text-base shadow-md rounded-xl">Subscribe</button>
                     </div>
                     </div>
                 </div>
@@ -45,10 +69,11 @@ const Footer = () => {
                         </label>
                         <div className="join">
                             <input
+                            onChange={handleEmailInput}
                             type="email"
                             placeholder="Enter your email"
                             className="input input-bordered join-item" />
-                            <button className="btn text-black text-base font-bold bg-gradient-to-r from-[#F9D586] to-[#E77D9D] join-item focus:outline-none border-none">Subscribe</button>
+                            <button onClick={handleSubscribe} className="btn text-black text-base font-bold bg-gradient-to-r from-[#F9D586] to-[#E77D9D] join-item focus:outline-none border-none">Subscribe</button>
                         </div>
                         </fieldset>
                     </form>
